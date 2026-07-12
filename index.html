@@ -1,12 +1,48 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>你好，世界</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="陈真｜AI 产品经理。记录 AI 产品判断、原型实验与落地方法。">
+  <meta property="og:title" content="陈真 · AI 产品经理">
+  <meta property="og:description" content="不追逐每一个模型新闻，只研究 AI 如何真正进入产品。">
+  <meta property="og:image" content="https://chenzhenview.com/assets/og.png">
+  <title>陈真 · AI 产品经理</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>你好，世界！</h1>
-  <p>这是一个最简单的 HTML 网页。</p>
-</body>
-</html>
+  <header class="nav"><a class="logo" href="#top">CHEN<span>ZHEN</span></a><nav><a href="#work">产品实验</a><a href="#writing">文章</a><a href="#about">关于</a></nav><button class="menu" aria-label="打开菜单">☰</button></header>
+  <main id="top">
+    <section class="hero reveal">
+      <div class="eyebrow"><i></i>AI PRODUCT MANAGER · SHANGHAI</div>
+      <h1>把不确定的 AI，<br>做成<span>确定的产品。</span></h1>
+      <p class="hero-copy">我是陈真，一名关注 AI Agent、文档智能与人机协作的产品经理。这里不复述行业新闻，只分享我真正做过的原型、踩过的坑，以及仍在验证的判断。</p>
+      <div class="hero-actions"><a class="btn primary" href="#work">体验产品实验</a><a class="btn text" href="#writing">阅读我的思考 <b>↗</b></a></div>
+      <div class="hero-note"><b>当前研究问题</b><span>当模型能力趋同时，AI 产品的壁垒究竟在哪里？</span></div>
+    </section>
+
+    <section class="manifesto reveal">
+      <p>我相信好的 AI 产品不是“接上一个模型”，而是重新设计任务、信任和责任的边界。</p>
+      <div class="manifesto-grid"><div><b>01</b><h3>先理解工作</h3><p>不从功能清单出发，从用户真正付出时间和承担风险的地方出发。</p></div><div><b>02</b><h3>让智能可见</h3><p>把推理过程、置信度和不确定性做成用户能够判断的界面。</p></div><div><b>03</b><h3>为失败而设计</h3><p>AI 一定会犯错。审批、回退与审计不是补丁，而是产品本体。</p></div></div>
+    </section>
+
+    <section id="work" class="section reveal">
+      <div class="section-head"><div><span>PRODUCT LAB / 01</span><h2>产品实验</h2></div><p>两个可以直接上手的 MVP。它们不试图证明 AI 无所不能，而是验证具体工作流是否值得被重新设计。</p></div>
+      <div class="projects">
+        <article class="project project-green"><div class="project-top"><span>DOCUMENT INTELLIGENCE</span><span class="live">● LIVE DEMO</span></div><h3>DocFlow AI</h3><p>把发票、合同和扫描件变成可复核的数据。识别只是开始，真正的产品价值在于“提取—校验—回写”的完整闭环。</p><ul><li>字段提取与置信度</li><li>人工复核工作台</li><li>结构化 JSON 导出</li></ul><div class="project-actions"><button class="btn primary" data-demo="docflow">立即体验</button><a href="https://github.com/Jeane-Chen/docflow-ai-mvp" target="_blank" rel="noreferrer">查看项目 ↗</a></div><div class="project-screen doc-screen"><div class="screen-bar"><i></i><i></i><i></i></div><div class="doc-paper"><small>增值税电子发票</small><b>¥ 13,568.00</b><span>已识别 7 个字段</span></div><div class="doc-fields"><i style="width:88%"></i><i style="width:72%"></i><i style="width:94%"></i></div></div></article>
+        <article class="project project-violet"><div class="project-top"><span>CODING AGENT</span><span class="live">● LIVE DEMO</span></div><h3>DevAgent Hub</h3><p>从 Issue 到可审查的代码方案。智能体负责理解、规划和验证，是否采用变更始终由人决定。</p><ul><li>Issue 任务规划</li><li>安全 Patch 预览</li><li>Human-in-the-loop</li></ul><div class="project-actions"><button class="btn primary violet" data-demo="devagent">立即体验</button><a href="https://github.com/Jeane-Chen/devagent-hub-mvp" target="_blank" rel="noreferrer">查看项目 ↗</a></div><div class="project-screen code-screen"><div class="screen-bar"><i></i><i></i><i></i></div><code><em>+</em> clean_name = name.strip()<br><em>+</em> if not clean_name:<br><em>+</em>&nbsp;&nbsp; clean_name = "friend"<br><span>✓ 3 tests passed</span></code></div></article>
+      </div>
+    </section>
+
+    <section id="writing" class="section writing reveal">
+      <div class="section-head"><div><span>FIELD NOTES / 02</span><h2>一线笔记</h2></div><p>写给同样在一线做产品的人。尽量讲清楚判断是怎么来的，也保留那些还没有答案的部分。</p></div>
+      <div id="article-list" class="article-list"></div>
+    </section>
+
+    <section id="about" class="about reveal"><div><span class="stamp">ABOUT / 陈真</span><h2>产品经理的工作，<br>是把技术势能变成用户价值。</h2></div><div><p>我持续研究 AI 原生产品的交互、评估与商业化。相比“模型又提升了多少分”，我更关心用户是否敢把真实任务交给它、团队是否能稳定交付，以及产品是否能在热度退去后继续创造价值。</p><p>这个网站是我的公开工作台：有完成的原型，也有尚未成熟的判断。如果其中某个问题也困扰着你，欢迎和我交流。</p><a class="btn primary" href="mailto:hello@chenzhenview.com">聊聊 AI 产品</a></div></section>
+  </main>
+  <footer><div class="logo">CHEN<span>ZHEN</span></div><p>Build useful things. Write honest notes.</p><span>© 2026 陈真</span></footer>
+
+  <dialog id="demo-dialog"><button class="dialog-close" aria-label="关闭">×</button><div id="demo-content"></div></dialog>
+  <script src="articles.js"></script><script src="app.js"></script>
+</body></html>
