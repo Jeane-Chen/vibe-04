@@ -1,0 +1,75 @@
+.project-pm {
+  background: #173d48;
+}
+
+.project-qihe {
+  background: #6b3428;
+}
+
+.project-actions .pm {
+  background: #8ee7ff;
+}
+
+.project-actions .qihe {
+  background: #ffd38a;
+}
+
+.pm-screen,
+.qihe-screen {
+  background: #f7f3e9;
+}
+
+.pm-summary,
+.qihe-summary {
+  display: grid;
+  gap: 10px;
+  padding: 22px 28px;
+}
+
+.pm-summary small,
+.qihe-summary small {
+  color: #69716c;
+  font: 700 11px ui-monospace, SFMono-Regular, monospace;
+}
+
+.pm-summary b,
+.qihe-summary b {
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.pm-summary span,
+.qihe-summary span {
+  background: white;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.pm-next {
+  justify-self: start;
+  background: #173d48;
+  color: white;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.qihe-summary span i {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  background: #f0c7a7;
+  color: #6b3428;
+  font-style: normal;
+  font-weight: 800;
+}
+
+@media (max-width: 800px) {
+  .pm-summary,
+  .qihe-summary {
+    padding: 18px 20px;
+  }
+}
