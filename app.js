@@ -1,5 +1,5 @@
 const list=document.querySelector('#article-list');
-if(list) list.innerHTML=ARTICLES.map((a,i)=>`<a class="article-card" href="article.html?slug=${a.slug}"><span class="num">0${i+1}</span><div><h3>${a.title}</h3><p>${a.dek}</p></div><span class="meta">${a.category}<br>${a.reading}</span><b>↗</b></a>`).join('');
+if(list) list.innerHTML=[...ARTICLES].sort((a,b)=>b.date.localeCompare(a.date)).map((a,i)=>`<a class="article-card" href="article.html?slug=${a.slug}"><span class="num">${String(i+1).padStart(2,'0')}</span><div><h3>${a.title}</h3><p>${a.dek}</p></div><span class="meta">${a.category}<br>${a.reading}</span><b>↗</b></a>`).join('');
 const dialog=document.querySelector('#demo-dialog'),content=document.querySelector('#demo-content');
 document.querySelectorAll('[data-demo]').forEach(b=>b.onclick=()=>openDemo(b.dataset.demo));
 document.querySelector('.dialog-close').onclick=()=>dialog.close();
